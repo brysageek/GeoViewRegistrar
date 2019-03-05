@@ -11,6 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoViewRegistrar.Uwp", "Geo
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		GeoViewRegistrar.Shared\GeoViewRegistrar.Shared.projitems*{07fdff44-155b-44f2-a709-2b9bcad762fe}*SharedItemsImports = 4
 		GeoViewRegistrar.Shared\GeoViewRegistrar.Shared.projitems*{b47e5139-2df4-42c8-93f9-da8301b8f9a1}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

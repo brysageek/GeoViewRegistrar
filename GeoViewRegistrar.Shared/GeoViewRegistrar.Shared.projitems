@@ -10,7 +10,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\GeoViewRegistrar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LocationViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SceneViewModel.cs" />
   </ItemGroup>
 </Project>

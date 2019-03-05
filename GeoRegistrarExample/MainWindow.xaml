@@ -4,9 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeoRegistrarExample"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid DataContext="">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <esri:MapView DataContext="{Binding MapVm, Source={StaticResource Locator}}" Grid.Column="0" Name="MainMapView" Map="{Binding MainMap}"/>
+        <esri:SceneView DataContext="{Binding SceneVm, Source={StaticResource Locator}}" Grid.Column="1" Name="MainSceneView" Scene="{Binding MainScene}"/>
     </Grid>
 </Window>
