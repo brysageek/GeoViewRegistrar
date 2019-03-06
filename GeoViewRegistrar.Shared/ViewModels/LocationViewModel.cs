@@ -1,4 +1,5 @@
 ﻿using Esri.ArcGISRuntime.Geometry;
+using Esri.ArcGISRuntime.UI.Controls;
 using GalaSoft.MvvmLight;
 
 namespace GeoViewRegistrar.Shared.ViewModels
@@ -19,7 +20,10 @@ namespace GeoViewRegistrar.Shared.ViewModels
 
         public LocationViewModel()
         {
-            
+            MessengerInstance.Register<GeoViewInputEventArgs>(this, e =>
+            {
+                MapPoint = e.Location;
+            });
         }
     }
 }

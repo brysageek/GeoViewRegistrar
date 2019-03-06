@@ -12,6 +12,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		GeoViewRegistrar.Shared\GeoViewRegistrar.Shared.projitems*{07fdff44-155b-44f2-a709-2b9bcad762fe}*SharedItemsImports = 4
+		GeoViewRegistrar.Shared\GeoViewRegistrar.Shared.projitems*{5498f00e-2c69-4c2a-a545-a7fda794b2d3}*SharedItemsImports = 4
 		GeoViewRegistrar.Shared\GeoViewRegistrar.Shared.projitems*{b47e5139-2df4-42c8-93f9-da8301b8f9a1}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

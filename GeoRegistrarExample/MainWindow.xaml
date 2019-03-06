@@ -9,10 +9,17 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid DataContext="">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <esri:MapView DataContext="{Binding MapVm, Source={StaticResource Locator}}" Grid.Column="0" Name="MainMapView" Map="{Binding MainMap}"/>
-        <esri:SceneView DataContext="{Binding SceneVm, Source={StaticResource Locator}}" Grid.Column="1" Name="MainSceneView" Scene="{Binding MainScene}"/>
+        <StackPanel DataContext="{Binding LocationVm, Source={StaticResource Locator}}" Grid.Column="1"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="{Binding MapPoint.X}"/>
+            <TextBlock Text="{Binding MapPoint.Y}"/>
+            <TextBlock  Text="{Binding MapPoint.SpatialReference}"/>
+        </StackPanel>
+        <esri:SceneView DataContext="{Binding SceneVm, Source={StaticResource Locator}}" Grid.Column="2" Name="MainSceneView" Scene="{Binding MainScene}"/>
     </Grid>
 </Window>

@@ -1,6 +1,5 @@
 ﻿using System;
 using Esri.ArcGISRuntime.Mapping;
-using Esri.ArcGISRuntime.UI.Controls;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 
@@ -15,8 +14,8 @@ namespace GeoViewRegistrar.Shared.ViewModels
             get => _mainScene;
             set
             {
-                _mainScene = value; 
-                RaisePropertyChanged(()=>MainScene);
+                _mainScene = value;
+                RaisePropertyChanged(() => MainScene);
             }
         }
 
@@ -24,16 +23,11 @@ namespace GeoViewRegistrar.Shared.ViewModels
         public SceneViewModel()
         {
             MainScene = new Scene(Basemap.CreateOpenStreetMap());
-            MessengerInstance.Register<GeoViewInputEventArgs>(this, e =>
-            {
-                Console.WriteLine("SceneViewModel Heard it");
-            });
         }
 
         public SceneViewModel(Scene scene)
         {
             MainScene = scene;
-          
         }
     }
 }
